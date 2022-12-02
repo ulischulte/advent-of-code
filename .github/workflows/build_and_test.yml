@@ -28,8 +28,6 @@ jobs:
         with:
           distribution: 'corretto'
           java-version: '17'
-      - name: Grant Permissions to gradlew
-        run: chmod +x gradlew
       - name: Run build
         run: |
           ./gradlew clean build
