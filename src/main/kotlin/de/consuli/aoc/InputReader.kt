@@ -17,6 +17,5 @@ object InputReader {
             "Day${day.toString().padStart(2, '0')}_$year${if (sampleInput) "_sample" else ""}.txt"
         ).let { it -> File(it.toURI()) }
     }
-
-
+    
 }
