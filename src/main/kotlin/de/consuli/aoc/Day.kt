@@ -1,8 +1,16 @@
 package de.consuli.aoc
 
-abstract class Day(val dayNumber: Int, val year: Int, val testInput: List<String>, val title: String) {
+abstract class Day(dayNumber: Int) {
 
-    abstract fun partOne(): Any
+    private val testInputList: List<String> = InputReader.testInputAsList(dayNumber)
+    private val inputList: List<String> = InputReader.inputAsList(dayNumber)
 
-    abstract fun partTwo(): Any
+    abstract fun partOne(testInput: Boolean): Any
+
+    abstract fun partTwo(testInput: Boolean): Any
+
+    fun getInput(testInput: Boolean): List<String> {
+        return if (testInput) testInputList else inputList
+    }
+
 }
