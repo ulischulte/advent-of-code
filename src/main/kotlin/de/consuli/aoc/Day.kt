@@ -1,6 +1,6 @@
 package de.consuli.aoc
 
-abstract class Day(dayNumber: Int) {
+abstract class Day(val dayNumber: Int) {
 
     private val testInputList: List<String> = InputReader.testInputAsList(dayNumber)
     private val inputList: List<String> = InputReader.inputAsList(dayNumber)
