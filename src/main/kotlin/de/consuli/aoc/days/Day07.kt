@@ -3,7 +3,7 @@ package de.consuli.aoc.days
 import de.consuli.aoc.Day
 
 class Day07 : Day(7) {
-    
+
     override fun partOne(testInput: Boolean): Any {
         this.init()
         parseDirectories(testInput)
@@ -25,7 +25,7 @@ class Day07 : Day(7) {
         getInput(testInput).forEach {
             when {
                 it.startsWith(CHANGE_DIRECTORY_COMMAND) ->
-                    when (val directoryName = it.substringAfter(CHANGE_DIRECTORY_COMMAND).trim()) {
+                    when (val directoryName = it.substringAfter(CHANGE_DIRECTORY_COMMAND)) {
                         "/" -> currentDirectory = rootDirectory
                         ".." -> currentDirectory = currentDirectory.parentDirectory!!
                         else -> currentDirectory =
