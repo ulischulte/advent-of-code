@@ -9,7 +9,20 @@ import kotlin.system.measureTimeMillis
 import kotlin.test.assertEquals
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-abstract class DayTest(private val day: Day, private val expectedOutput: PuzzleOutput) {
+abstract class DayTest<out T>(
+    private val day: Day,
+    private val expectedOutput: PuzzleOutput,
+    private val implementation: T? = null
+) {
+
+    constructor(
+        day: Day,
+        expectedOutput: PuzzleOutput
+    ) : this(day, expectedOutput, null)
+
+    fun get(): T? {
+        return this.implementation
+    }
 
     @BeforeAll
     internal fun printTestOutputHeader() {

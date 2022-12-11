@@ -1,6 +1,6 @@
 package de.consuli.aoc.days
 
-class Day02Test: DayTest(
+class Day02Test : DayTest<Day02>(
     Day02(), PuzzleOutput(
         partOneExpectedSampleOutput = 15,
         partOneExpectedOutput = 10941,
