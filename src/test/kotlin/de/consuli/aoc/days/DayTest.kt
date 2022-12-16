@@ -1,6 +1,6 @@
 package de.consuli.aoc.days
 
-import de.consuli.aoc.Day
+import de.consuli.aoc.common.Day
 import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestInstance

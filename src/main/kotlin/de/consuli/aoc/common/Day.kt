@@ -1,4 +1,4 @@
-package de.consuli.aoc
+package de.consuli.aoc.common
 
 abstract class Day {
 

@@ -1,6 +1,6 @@
 package de.consuli.aoc.days
 
-import de.consuli.aoc.Day
+import de.consuli.aoc.common.Day
 
 class Day04 : Day(4) {
     override fun partOne(testInput: Boolean): Any {
