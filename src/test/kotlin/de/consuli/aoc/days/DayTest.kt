@@ -77,8 +77,8 @@ abstract class DayTest<out T>(
 }
 
 data class PuzzleOutput(
-    val partOneExpectedSampleOutput: Any?,
-    val partOneExpectedOutput: Any?,
-    val partTwoExpectedSampleOutput: Any?,
-    val partTwoExpectedOutput: Any?
+    val partOneExpectedSampleOutput: Any? = null,
+    val partOneExpectedOutput: Any? = null,
+    val partTwoExpectedSampleOutput: Any? = null,
+    val partTwoExpectedOutput: Any? = null
 )

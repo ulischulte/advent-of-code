@@ -10,7 +10,7 @@ class Day10 : Day(10) {
     override fun partTwo(testInput: Boolean): String {
         val cpu = mapInputToCpuCycles(testInput)
         var outputString = ""
-        (1 .. 240).forEach { currentPixel ->
+        (1..240).forEach { currentPixel ->
             val valueAtCurrentCycle = cpu.cycles.elementAt(currentPixel - 1).value
             outputString += if ((currentPixel) % 40 in (valueAtCurrentCycle)..(valueAtCurrentCycle + 2)) {
                 "#"
@@ -18,8 +18,9 @@ class Day10 : Day(10) {
                 "."
             }
         }
-        return outputString.chunked(40).joinToString ( "\n", "\n" )
+        return outputString.chunked(40).joinToString("\n", "\n")
     }
+
     private fun mapInputToCpuCycles(testInput: Boolean): CPU {
         val cpu = CPU()
         getInput(testInput).forEach { line ->

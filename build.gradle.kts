@@ -24,6 +24,7 @@ dependencies {
 dependencies {
     implementation("org.reflections", "reflections", "0.9.12")
     testImplementation(kotlin("test"))
+    testImplementation("io.kotest:kotest-assertions-core-jvm:5.5.4")
 }
 
 tasks.test {
