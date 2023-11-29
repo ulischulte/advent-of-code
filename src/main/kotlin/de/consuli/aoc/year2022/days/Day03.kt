@@ -1,8 +1,8 @@
-package de.consuli.aoc.days
+package de.consuli.aoc.year2022.days
 
 import de.consuli.aoc.common.Day
 
-class Day03 : Day(3) {
+class Day03 : Day(3, 2022) {
     override fun partOne(testInput: Boolean): Any {
         return getInput(testInput).sumOf {
             getPriorityForItemInBothCompartments(it)

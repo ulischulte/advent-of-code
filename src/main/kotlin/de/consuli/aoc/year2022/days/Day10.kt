@@ -1,8 +1,8 @@
-package de.consuli.aoc.days
+package de.consuli.aoc.year2022.days
 
 import de.consuli.aoc.common.Day
 
-class Day10 : Day(10) {
+class Day10 : Day(10, 2022) {
     override fun partOne(testInput: Boolean): Int {
         return intArrayOf(20, 60, 100, 140, 180, 220).sumOf { mapInputToCpuCycles(testInput).getSignalStrength(it) }
     }

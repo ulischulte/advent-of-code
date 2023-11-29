@@ -1,5 +1,7 @@
-package de.consuli.aoc.days
+package de.consuli.aoc.year2022.days
 
+import de.consuli.aoc.DayTest
+import de.consuli.aoc.PuzzleOutput
 import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.shouldBe

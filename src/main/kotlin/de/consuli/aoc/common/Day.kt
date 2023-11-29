@@ -3,14 +3,16 @@ package de.consuli.aoc.common
 abstract class Day {
 
     val dayNumber: Int
+    val yearNumber: Int
 
     private val testInputList: List<String>
     private val inputList: List<String>
 
-    constructor(dayNumber: Int) {
+    constructor(dayNumber: Int, yearNumber: Int) {
         this.dayNumber = dayNumber
-        this.testInputList = InputReader.testInputAsList(dayNumber)
-        this.inputList = InputReader.inputAsList(dayNumber)
+        this.yearNumber = yearNumber
+        this.testInputList = InputReader.testInputAsList(dayNumber, yearNumber)
+        this.inputList = InputReader.inputAsList(dayNumber, yearNumber)
     }
 
     abstract fun partOne(testInput: Boolean): Any

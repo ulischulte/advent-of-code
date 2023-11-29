@@ -1,8 +1,8 @@
-package de.consuli.aoc.days
+package de.consuli.aoc.year2022.days
 
 import de.consuli.aoc.common.Day
 
-class Day04 : Day(4) {
+class Day04 : Day(4, 2022) {
     override fun partOne(testInput: Boolean): Any {
         return getInput(testInput).count { sectionAssignment ->
             val sections = getSections(sectionAssignment)

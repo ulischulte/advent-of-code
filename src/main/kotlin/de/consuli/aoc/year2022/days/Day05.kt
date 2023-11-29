@@ -1,8 +1,8 @@
-package de.consuli.aoc.days
+package de.consuli.aoc.year2022.days
 
 import de.consuli.aoc.common.Day
 
-class Day05 : Day(5) {
+class Day05 : Day(5, 2022) {
     override fun partOne(testInput: Boolean): Any {
         return calculateFinalCrateOrder(testInput, false)
     }
@@ -20,7 +20,6 @@ class Day05 : Day(5) {
         }
         return stacks.filter { it.isNotEmpty() }.joinToString("") { it[0] }
     }
-
 
     private fun getStacks(testInput: Boolean): List<List<String>> {
         val stacks = List(9) { ArrayList<String>() }

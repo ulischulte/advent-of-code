@@ -1,4 +1,7 @@
-package de.consuli.aoc.days
+package de.consuli.aoc.year2022.days
+
+import de.consuli.aoc.DayTest
+import de.consuli.aoc.PuzzleOutput
 
 class Day03Test : DayTest<Day03>(
     Day03(), PuzzleOutput(

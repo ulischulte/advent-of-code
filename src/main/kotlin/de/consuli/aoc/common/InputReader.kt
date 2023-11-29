@@ -4,17 +4,17 @@ import java.io.File
 
 object InputReader {
 
-    fun inputAsList(day: Int): List<String> {
-        return fromResources(day, false).readLines()
+    fun inputAsList(day: Int, year: Int): List<String> {
+        return fromResources(day, year, false).readLines()
     }
 
-    fun testInputAsList(day: Int): List<String> {
-        return fromResources(day, true).readLines()
+    fun testInputAsList(day: Int, year: Int): List<String> {
+        return fromResources(day, year, true).readLines()
     }
 
-    private fun fromResources(day: Int, sampleInput: Boolean): File =
+    private fun fromResources(day: Int, year: Int, sampleInput: Boolean): File =
         Thread.currentThread().contextClassLoader.getResource(
-            "Day${day.toString().padStart(2, '0')}${if (sampleInput) "_sample" else ""}.txt"
+            "Day${day.toString().padStart(2, '0')}$year${if (sampleInput) "_sample" else ""}.txt"
         ).let { File(it.toURI()) }
 
 }

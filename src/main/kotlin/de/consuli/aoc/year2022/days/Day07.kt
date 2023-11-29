@@ -1,8 +1,8 @@
-package de.consuli.aoc.days
+package de.consuli.aoc.year2022.days
 
 import de.consuli.aoc.common.Day
 
-class Day07 : Day(7) {
+class Day07 : Day(7, 2022) {
 
     override fun partOne(testInput: Boolean): Any {
         this.init()

@@ -1,9 +1,8 @@
-package de.consuli.aoc.days
+package de.consuli.aoc.year2022.days
 
 import de.consuli.aoc.common.Day
-import java.util.*
 
-class Day11 : Day(11) {
+class Day11 : Day(11, 2022) {
     override fun partOne(testInput: Boolean): Any {
         return doMonkeyBusiness(testInput, 20, true)
     }
@@ -25,7 +24,7 @@ class Day11 : Day(11) {
 
     fun getMonkeysFromInput(testInput: Boolean): List<Monkey> {
         val monkeys = ArrayList<Monkey>()
-        getInput(testInput).chunked(7).forEach{ monkeyInput ->
+        getInput(testInput).chunked(7).forEach { monkeyInput ->
             monkeys.add(
                 Monkey(
                     monkeyInput[1].split(":")[1].trim().split(",").map { it.trim().toLong() }

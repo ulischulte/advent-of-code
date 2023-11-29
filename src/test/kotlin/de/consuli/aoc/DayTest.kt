@@ -1,4 +1,4 @@
-package de.consuli.aoc.days
+package de.consuli.aoc
 
 import de.consuli.aoc.common.Day
 import org.junit.jupiter.api.BeforeAll
@@ -26,7 +26,7 @@ abstract class DayTest<out T>(
 
     @BeforeAll
     internal fun printTestOutputHeader() {
-        println("===== Testing solution for day ${day.dayNumber} =====")
+        println("===== Testing solution for day ${day.dayNumber} in ${day.yearNumber} =====")
     }
 
     @Test

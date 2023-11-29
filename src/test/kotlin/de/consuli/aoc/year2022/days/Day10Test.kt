@@ -1,4 +1,7 @@
-package de.consuli.aoc.days
+package de.consuli.aoc.year2022.days
+
+import de.consuli.aoc.DayTest
+import de.consuli.aoc.PuzzleOutput
 
 class Day10Test : DayTest<Day10>(
     Day10(), PuzzleOutput(
@@ -12,7 +15,6 @@ class Day10Test : DayTest<Day10>(
                 "#....#..#.#....#..#.#....#..#.#....#.#.#\n" +
                 "####..##..####..##..####.#..#.####.#..#."
     ), Day10()
-
 
 )
 

@@ -1,8 +1,8 @@
-package de.consuli.aoc.days
+package de.consuli.aoc.year2022.days
 
 import de.consuli.aoc.common.Day
 
-class Day02 : Day(2) {
+class Day02 : Day(2, 2022) {
 
     private val strategyPointsMap =
         mapOf("A X" to 3, "A Y" to 6, "B Y" to 3, "B Z" to 6, "C X" to 6, "C Z" to 3)

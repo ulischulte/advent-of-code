@@ -1,8 +1,8 @@
-package de.consuli.aoc.days
+package de.consuli.aoc.year2022.days
 
 import de.consuli.aoc.common.Day
 
-class Day01 : Day(1) {
+class Day01 : Day(1, 2022) {
 
     override fun partOne(testInput: Boolean): Int {
         return extractElvesCalorieIntakeFromInput(testInput).maxOf { it }

@@ -1,10 +1,10 @@
-package de.consuli.aoc.days
+package de.consuli.aoc.year2022.days
 
 import de.consuli.aoc.common.Day
 import de.consuli.aoc.util.Point
 import de.consuli.aoc.util.Point.Companion.printMatrixContainingPoints
 
-class Day09 : Day(9) {
+class Day09 : Day(9, 2022) {
 
     private val movesTestInput: List<String>
     private val moves: List<String>

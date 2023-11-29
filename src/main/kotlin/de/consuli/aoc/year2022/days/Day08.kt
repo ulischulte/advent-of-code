@@ -1,8 +1,8 @@
-package de.consuli.aoc.days
+package de.consuli.aoc.year2022.days
 
 import de.consuli.aoc.common.Day
 
-class Day08 : Day(8) {
+class Day08 : Day(8, 2022) {
 
     private val treesTestInput: List<Tree>
     private val trees: List<Tree>
