@@ -31,19 +31,19 @@ abstract class DayTest<out T>(
 
     @Test
     fun partOne() {
-        this.expectedOutput.partOneExpectedOutput?.let {
-            executePart(
-                1,
-                it,
-                false,
-                outputSupplier = { day.partOne(false) })
-        }
         this.expectedOutput.partOneExpectedSampleOutput?.let {
             executePart(
                 1,
                 it,
                 true,
                 outputSupplier = { day.partOne(true) })
+        }
+        this.expectedOutput.partOneExpectedOutput?.let {
+            executePart(
+                1,
+                it,
+                false,
+                outputSupplier = { day.partOne(false) })
         }
     }
 
