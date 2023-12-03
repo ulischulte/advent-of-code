@@ -49,19 +49,19 @@ abstract class DayTest<out T>(
 
     @Test
     fun partTwo() {
-        this.expectedOutput.partTwoExpectedOutput?.let {
-            executePart(
-                2,
-                it,
-                false,
-                outputSupplier = { day.partTwo(false) })
-        }
         this.expectedOutput.partTwoExpectedSampleOutput?.let {
             executePart(
                 2,
                 it,
                 true,
                 outputSupplier = { day.partTwo(true) })
+        }
+        this.expectedOutput.partTwoExpectedOutput?.let {
+            executePart(
+                2,
+                it,
+                false,
+                outputSupplier = { day.partTwo(false) })
         }
     }
 
