@@ -15,7 +15,7 @@ class Day11Test : DayTest<Day11>(
 ) {
     @Test
     fun getMonkeysFromInput() {
-        val monkeysFromInput = get()!!.getMonkeysFromInput(true)
+        val monkeysFromInput = getImplementation()!!.getMonkeysFromInput(true)
         assertSoftly(monkeysFromInput) {
             shouldHaveSize(4)
             assertSoftly(monkeysFromInput[1]) {
