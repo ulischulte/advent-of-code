@@ -22,15 +22,16 @@ abstract class DayTest<T>(
     }
 
     @Test
-    fun testPartOne() {
-        executePart(1, expectedOutput.partOneExpectedSampleOutput, true, day::partOne)
-        executePart(1, expectedOutput.partOneExpectedOutput, false, day::partOne)
-    }
+    fun testPartOne() =
+        testPart(day::partOne, expectedOutput.partOneExpectedSampleOutput, expectedOutput.partOneExpectedOutput, 1)
 
     @Test
-    fun testPartTwo() {
-        executePart(2, expectedOutput.partTwoExpectedSampleOutput, true, day::partTwo)
-        executePart(2, expectedOutput.partTwoExpectedOutput, false, day::partTwo)
+    fun testPartTwo() =
+        testPart(day::partTwo, expectedOutput.partTwoExpectedSampleOutput, expectedOutput.partTwoExpectedOutput, 2)
+
+    private fun testPart(partFunction: (Boolean) -> Any, sampleOutput: Any?, expectedOutput: Any?, testPart: Int) {
+        sampleOutput?.let { executePart(testPart, it, true, partFunction) }
+        expectedOutput?.let { executePart(testPart, it, false, partFunction) }
     }
 
     private fun executePart(part: Int, expectedOutput: Any?, isSample: Boolean, function: (Boolean) -> Any) {
