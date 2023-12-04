@@ -8,7 +8,7 @@ class Day04 : Day(4, 2023) {
     data class ScratchCard(val winningNumbers: Set<Int>, val numbers: Set<Int>)
 
     override fun partOne(testInput: Boolean): Int = mapInputToScratchCards(getInput(testInput))
-        .sumOf { calculatePointsvorCard(it) }
+        .sumOf { calculatePointsForCard(it) }
 
     override fun partTwo(testInput: Boolean): Int {
         val scratchCards = mapInputToScratchCards(getInput(testInput))
@@ -25,7 +25,7 @@ class Day04 : Day(4, 2023) {
         return cardCopies.sum()
     }
 
-    private fun calculatePointsvorCard(card: ScratchCard): Int = card.numbers
+    private fun calculatePointsForCard(card: ScratchCard): Int = card.numbers
         .count { it in card.winningNumbers }
         .takeIf { it > 0 }?.let { 2.0.pow(it - 1).toInt() } ?: 0
 
